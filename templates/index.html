@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Women Safety Analytics System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<div class="container">
+
+    <h1>Women Safety Analytics System</h1>
+
+    <form action="/predict" method="post">
+
+        <table border="1" cellpadding="10" cellspacing="0">
+
+            <tr>
+                <td>Crime Rate</td>
+                <td><input type="number" name="crime_rate" required></td>
+            </tr>
+
+            <tr>
+                <td>Street Lighting (1-10)</td>
+                <td><input type="number" name="street_lighting" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Crowd Density (1-10)</td>
+                <td><input type="number" name="crowd_density" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Police Patrol Frequency (1-10)</td>
+                <td><input type="number" name="police_patrol" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>CCTV Coverage (1-10)</td>
+                <td><input type="number" name="cctv" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Emergency Services Availability (1-10)</td>
+                <td><input type="number" name="emergency_services" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Public Transport Availability (1-10)</td>
+                <td><input type="number" name="transport" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Road Condition (1-10)</td>
+                <td><input type="number" name="road_condition" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Population Density</td>
+                <td><input type="number" name="population_density" required></td>
+            </tr>
+
+            <tr>
+                <td>Area Type</td>
+                <td>
+                    <select name="area_type">
+                        <option value="Urban">Urban</option>
+                        <option value="Rural">Rural</option>
+                        <option value="Semi-Urban">Semi-Urban</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Time of Day</td>
+                <td>
+                    <select name="time_of_day">
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Night">Night</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nearby Hospitals</td>
+                <td><input type="number" name="hospitals" required></td>
+            </tr>
+
+            <tr>
+                <td>Nearby Police Stations</td>
+                <td><input type="number" name="police_stations" required></td>
+            </tr>
+
+            <tr>
+                <td>Reported Complaints</td>
+                <td><input type="number" name="complaints" required></td>
+            </tr>
+
+            <tr>
+                <td>Women Safety Awareness Level (1-10)</td>
+                <td><input type="number" name="awareness" min="1" max="10" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Predict Safety</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <h2>{{ prediction }}</h2>
+
+</div>
+
+</body>
+</html>
