@@ -22,5 +22,9 @@ Women Safety Analytics is a web application that predicts women's safety based o
 2. Run app.py.
 3. Open the application in your browser.
 
+   demo video
+   https://drive.google.com/file/d/1GSB5sG9sS4VtIKIEhWbH2ve9M8lyCldC/view?usp=drive_link
+   
+
 ## Author
 Prathika Sangeetha
